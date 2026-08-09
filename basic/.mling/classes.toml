@@ -1,1 +1,5 @@
 [[classes]]
+name = "subcommand"
+description = "Add a subcommand"
+template = "classes/subcommand.rs"
+output-dir = "src/command/"
