@@ -39,8 +39,10 @@ async fn begin() {
 ??? <<<
 ??? >>> COMPLETION
 
+??? >>> NOT_DISPATCH_TREE
     // Completion Dispatcher
     program.with_dispatcher(CMDCompletion);
+??? <<<
 ??? <<<
 
 ??? >>> SYNC
