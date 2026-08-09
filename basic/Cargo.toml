@@ -5,7 +5,7 @@ edition = "2024"
 
 [[bin]]
 name = "<<<program_name>>>"
-path = "src/main.rs"
+path = "src/bin/program.rs"
 
 [profile.dev]
 opt-level = 0
@@ -21,7 +21,12 @@ panic = "abort"
 lto = true
 
 [dependencies.mingling]
+??? >>> DEBUG
+path = "../mingling/mingling"
+??? <<<
+??? >>> NOT_DEBUG
 version = "0.4"
+??? <<<
 features = [
     "extras",
 ??? >>> ASYNC
@@ -52,7 +57,12 @@ features = [
 
 ??? >>> BUILD_TIME
 [build-dependencies.mingling]
+??? >>> DEBUG
+path = "../mingling/mingling"
+??? <<<
+??? >>> NOT_DEBUG
 version = "0.4"
+??? <<<
 features = [
     "build",
 ??? >>> DISPATCH_TREE
@@ -76,4 +86,7 @@ tokio = { version = "1", features = [ "full" ] }
 ??? <<<
 ??? >>> ASYNC_STD
 async-std = "1"
+??? <<<
+??? >>> SMOL
+soml = "2"
 ??? <<<

@@ -12,8 +12,11 @@ name = "tokio"
 [[user.toggle]]
 name = "async_std"
 
+[[user.toggle]]
+name = "smol"
+
 [[user.toggle-mutex]]
-mutex = [ "tokio", "async_std" ]
+mutex = [ "tokio", "async_std", "smol" ]
 reason = "You can only select one async runtime"
 
 [[user.toggle]]
@@ -40,6 +43,9 @@ option = [ "clap", "builtin", "picker" ]
 mutex = [ "clap", "builtin", "picker" ]
 reason = "You can only select one argument parser"
 
+[[user.input]]
+name = "debug" # DEBUG ONLY
+
 # Display Control
 
 [[display]]
@@ -51,8 +57,16 @@ name = "TOKIO"
 rule = "tokio"
 
 [[display]]
+name = "SMOL"
+rule = "smol"
+
+[[display]]
 name = "ASYNC"
-rule = "tokio || async_std"
+rule = "tokio || async_std || smol"
+
+[[display]]
+name = "SYNC"
+rule = "!tokio && !async_std && !smol"
 
 [[display]]
 name = "BUILD_TIME"
@@ -73,6 +87,10 @@ rule = "use_parser && parser == builtin"
 [[display]]
 name = "PARSER_PICKER"
 rule = "use_parser && parser == picker"
+
+[[display]]
+name = "NOT_PARSER_PICKER"
+rule = "!use_parser || parser != picker"
 
 [[display]]
 name = "COMPLETION"
@@ -97,3 +115,11 @@ rule = "!dispatch_tree"
 [[display]]
 name = "PATHF"
 rule = "pathf"
+
+[[display]]
+name = "DEBUG"
+rule = "debug"
+
+[[display]]
+name = "NOT_DEBUG"
+rule = "!debug"

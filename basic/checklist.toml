@@ -1,9 +1,9 @@
 # --------------------------------------------------------------------------- #
-# 
+#
 #   Mingling 0.4 Template
 #
 # > Welcome to Mingling.
-# > Before starting your project, please fill out this `checklist` file, 
+# > Before starting your project, please fill out this `checklist` file,
 # > as it will determine the structure of your project.
 #
 # --------------------------------------------------------------------------- #
@@ -13,9 +13,12 @@
 program_name = "my-cli"
 
 ### 2. Please select the parser used in the project,
+# ------------------
+use_parser = true
+# ------------------
 
-# Clap Derive, the most mainstream option. 
-# When enabled, 
+# Clap Derive, the most mainstream option.
+# When enabled,
 # Mingling will use the struct implementing clap::Parser as the Entry Type
 # ------------------
 # parser = "clap"
@@ -36,6 +39,7 @@ parser = "picker"
 # ------------------
 # tokio = true
 # async_std = true
+# smol = true
 # ------------------
 
 ### 4. If you need flexible management of your program's exit codes, enable this
@@ -48,7 +52,7 @@ exit_code = true
 completion = true
 # ------------------
 
-### 6. If you expect the number of commands to be > 20, 
+### 6. If you expect the number of commands to be > 20,
 #   enable the compile-time dispatch tree for faster matching
 # ------------------
 # dispatch_tree = true
@@ -59,5 +63,10 @@ completion = true
 # structural_renderer = true
 # ------------------
 
-### Final. All set. 
+### 8. Enable developer debugging, which will modify the project structure for convenient debugging
+# ------------------
+# debug = true
+# ------------------
+
+### Final. All set.
 #   Please run `mling proj-init` in this directory to continue creating the project.
