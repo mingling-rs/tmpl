@@ -9,3 +9,15 @@ name = "error"
 description = "Add a error"
 template = "classes/error.rs"
 output-dir = "src/error/"
+
+[[classes]]
+name = "setup"
+description = "Add a setup"
+template = "classes/setup.rs"
+output-dir = "src/setup/"
+
+[[classes]]
+name = "hook"
+description = "Add a hook setup"
+template = "classes/hook.rs"
+output-dir = "src/hook/"
