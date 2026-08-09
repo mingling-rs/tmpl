@@ -37,6 +37,9 @@ async fn begin() {
 ??? >>> EXIT_CODE
     program.with_setup(ExitCodeSetup::default());
 ??? <<<
+??? >>> NOT_DISPATCH_TREE
+    program.with_setup(CommandsSetup);
+??? <<<
 ??? >>> COMPLETION
 
 ??? >>> NOT_DISPATCH_TREE

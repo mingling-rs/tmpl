@@ -1,3 +1,8 @@
+??? >>> NOT_DISPATCH_TREE
+#[path = ".mling/build-utils/commands_scanner.rs"]
+mod commands_scanner;
+
+??? <<<
 #[path = ".mling/build-utils/mod_scanner.rs"]
 mod mod_scanner;
 
@@ -7,6 +12,9 @@ fn main() {
 ??? <<<
 ??? >>> PATHF
     build_pathf_mapping();
+??? <<<
+??? >>> NOT_DISPATCH_TREE
+    commands_scanner::update_commands_setup();
 ??? <<<
     mod_scanner::update_all_mod_files();
 }
