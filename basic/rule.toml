@@ -109,6 +109,10 @@ name = "EXIT_CODE"
 rule = "exit_code"
 
 [[display]]
+name = "NOT_EXIT_CODE"
+rule = "!exit_code"
+
+[[display]]
 name = "DISPATCH_TREE"
 rule = "dispatch_tree"
 
