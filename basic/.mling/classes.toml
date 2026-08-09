@@ -21,3 +21,9 @@ name = "hook"
 description = "Add a hook setup"
 template = "classes/hook.rs"
 output-dir = "src/hook/"
+
+[[classes]]
+name = "resource"
+description = "Add a global resource"
+template = "classes/resource.rs"
+output-dir = "src/resource/"
