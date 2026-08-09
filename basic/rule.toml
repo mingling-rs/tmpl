@@ -76,10 +76,6 @@ rule = "completion || pathf"
 file = "./build.rs"
 rule = "!completion && !pathf"
 
-[[hide-dir]]
-dir = "./src/completion/"
-rule = "!completion"
-
 [[display]]
 name = "PARSER_CLAP"
 rule = "use_parser && parser == clap"
