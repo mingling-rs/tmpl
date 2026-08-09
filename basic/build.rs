@@ -1,3 +1,6 @@
+#[path = ".mling/build-utils/mod_scanner.rs"]
+mod mod_scanner;
+
 fn main() {
 ??? >>> COMPLETION
     build_scripts();
@@ -5,6 +8,7 @@ fn main() {
 ??? >>> PATHF
     build_pathf_mapping();
 ??? <<<
+    mod_scanner::update_all_mod_files();
 }
 ??? >>> COMPLETION
 
