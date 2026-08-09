@@ -23,9 +23,9 @@ fn main() {
 
 async fn begin() {
 ??? <<<
-??? >>> SMOL
+??? >>> SOML
 fn main() {
-    smol::block_on(begin());
+    soml::block_on(begin());
 }
 
 async fn begin() {

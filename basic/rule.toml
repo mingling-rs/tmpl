@@ -13,10 +13,10 @@ name = "tokio"
 name = "async_std"
 
 [[user.toggle]]
-name = "smol"
+name = "soml"
 
 [[user.toggle-mutex]]
-mutex = [ "tokio", "async_std", "smol" ]
+mutex = [ "tokio", "async_std", "soml" ]
 reason = "You can only select one async runtime"
 
 [[user.toggle]]
@@ -57,16 +57,16 @@ name = "TOKIO"
 rule = "tokio"
 
 [[display]]
-name = "SMOL"
-rule = "smol"
+name = "SOML"
+rule = "soml"
 
 [[display]]
 name = "ASYNC"
-rule = "tokio || async_std || smol"
+rule = "tokio || async_std || soml"
 
 [[display]]
 name = "SYNC"
-rule = "!tokio && !async_std && !smol"
+rule = "!tokio && !async_std && !soml"
 
 [[display]]
 name = "BUILD_TIME"

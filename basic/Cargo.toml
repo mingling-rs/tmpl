@@ -87,6 +87,6 @@ tokio = { version = "1", features = [ "full" ] }
 ??? >>> ASYNC_STD
 async-std = "1"
 ??? <<<
-??? >>> SMOL
+??? >>> SOML
 soml = "0.2"
 ??? <<<
