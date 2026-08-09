@@ -1,3 +1,5 @@
+# User Input
+
 [[user.input]]
 name = "program_name"
 
@@ -37,6 +39,8 @@ option = [ "clap", "builtin", "picker" ]
 [[user.toggle-mutex]]
 mutex = [ "clap", "builtin", "picker" ]
 reason = "You can only select one argument parser"
+
+# Display Control
 
 [[display]]
 name = "ASYNC_STD"
