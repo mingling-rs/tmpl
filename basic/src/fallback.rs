@@ -13,7 +13,7 @@ use mingling::macros::suggest;
 use mingling::prelude::*;
 
 #[help]
-pub(crate) fn help_fallback(prev: EntryFallback) -> String {
+pub(crate) fn help_fallback(_: EntryFallback) -> String {
     include_str!("../usage.txt").to_string()
 }
 
