@@ -6,7 +6,9 @@ use mingling::ShellContext;
 use mingling::Suggest;
 ??? <<<
 use mingling::macros::buffer;
+??? >>> COMPLETION
 use mingling::macros::suggest;
+??? <<<
 use mingling::prelude::*;
 
 #[renderer(buffer)]
