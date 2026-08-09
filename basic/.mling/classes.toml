@@ -3,3 +3,9 @@ name = "subcommand"
 description = "Add a subcommand"
 template = "classes/subcommand.rs"
 output-dir = "src/command/"
+
+[[classes]]
+name = "error"
+description = "Add a error"
+template = "classes/error.rs"
+output-dir = "src/error/"
