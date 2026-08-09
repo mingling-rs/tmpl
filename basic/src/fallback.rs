@@ -6,10 +6,16 @@ use mingling::ShellContext;
 use mingling::Suggest;
 ??? <<<
 use mingling::macros::buffer;
+use mingling::macros::help;
 ??? >>> COMPLETION
 use mingling::macros::suggest;
 ??? <<<
 use mingling::prelude::*;
+
+#[help]
+pub(crate) fn help_fallback(prev: EntryFallback) -> String {
+    include_str!("../usage.txt").to_string()
+}
 
 #[renderer(buffer)]
 pub(crate) fn handle_fallback(prev: EntryFallback) {

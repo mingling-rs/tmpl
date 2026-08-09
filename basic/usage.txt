@@ -1,0 +1,3 @@
+A Mingling-based command line program
+
+USAGE: <<<program_name>>> [SUBCOMMANDS] <ARGS...>
