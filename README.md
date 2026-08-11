@@ -10,6 +10,13 @@ mling cfg tmpl-source https://github.com/mingling-rs/tmpl.git
 mling proj-init rev@variant
 ```
 
+## Provided Templates
+
+|        | Basic Template | Tiny Template | Full Template |
+| -----: | :------------: | :-----------: | :-----------: |
+| Latest |   main@basic   |       X       |       X       |
+|  0.4.0 |       X        |       X       |       X       |
+
 ## Early Versions
 
 If you would like to look at early versions of the Mingling template, please visit [mingling-template](https://github.com/mingling-rs/mingling-template), which depends on `cargo-generate`:
