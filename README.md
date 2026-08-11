@@ -7,15 +7,15 @@ This project is a template for [Mingling](https://github.com/mingling-rs/minglin
 mling cfg tmpl-source https://github.com/mingling-rs/tmpl.git
 
 # Create a template
-mling proj-init rev@variant
+mling proj-init ref@variant
 ```
 
 ## Provided Templates
 
-|        | Basic Template | Tiny Template | Full Template |
-| -----: | :------------: | :-----------: | :-----------: |
-| Latest |   main@basic   |       X       |       X       |
-|  0.4.0 |       X        |       X       |       X       |
+| ref\variant | Basic Template | Tiny Template | Full Template |
+| ----------: | :------------: | :-----------: | :-----------: |
+|      Latest |   main@basic   |       X       |       X       |
+|       0.4.0 |       X        |       X       |       X       |
 
 ## Early Versions
 
