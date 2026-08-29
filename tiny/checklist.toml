@@ -1,0 +1,40 @@
+# --------------------------------------------------------------------------- #
+#
+#   Mingling 0.5 Template (Tiny)
+#
+# > Welcome to Mingling.
+# > Before starting your project, please fill out this `checklist` file,
+# > as it will determine the structure of your project.
+#
+# --------------------------------------------------------------------------- #
+
+name = "tiny-cli"
+version = "0.1.0"
+description = "A simple CLI program"
+
+##############
+### LINTER ###
+##############
+
+### Regarding `rust-analyzer` support
+#   Enable to create configuration files for `rust-analyzer`,
+#   they will configure the `mling ra-lint-check` command for code quality checks
+# ------------------
+# ra_zed = true
+# ra_vscode = true
+# ra_toml = true
+
+### Checking Method
+#   HINT: You can choose one Linter checking method
+# ------------------
+# lint_check = true
+# lint_clippy = true
+
+#############
+### DEBUG ###
+#############
+
+### Development/Debug Mode
+#   Point the mingling dependency to a relative path "../mingling/mingling" for local debugging
+# ------------------
+# debug = true

@@ -1,0 +1,65 @@
+[[user.input]]
+name = "name"
+
+[[user.input]]
+name = "version"
+
+[[user.input]]
+name = "description"
+
+# Debug
+[[user.toggle]]
+name = "debug"
+
+[[display]]
+name = "DEBUG"
+rule = "debug"
+
+[[display]]
+name = "NOT_DEBUG"
+rule = "!debug"
+
+# Linter
+
+[[user.toggle]]
+name = "ra_zed"
+
+[[user.toggle]]
+name = "ra_vscode"
+
+[[user.toggle]]
+name = "ra_toml"
+
+[[user.toggle]]
+name = "lint_clippy"
+
+[[user.toggle]]
+name = "lint_check"
+
+[[user.toggle-mutex]]
+mutex = [ "lint_clippy", "lint_check" ]
+reason = "You can only choose one checking method"
+
+[[hide-file]]
+file = "./rust-analyzer.toml"
+rule = "!ra_toml"
+
+[[hide-dir]]
+dir = "./.vscode/"
+rule = "!ra_vscode"
+
+[[hide-dir]]
+dir = "./.zed/"
+rule = "!ra_zed"
+
+[[display]]
+name = "LINT_CHECK_DEFAULT"
+rule = "!lint_clippy && !lint_check"
+
+[[display]]
+name = "LINT_CHECK_CLIPPY"
+rule = "lint_clippy"
+
+[[display]]
+name = "LINT_CHECK_CHECK"
+rule = "lint_check"

@@ -1,0 +1,17 @@
+{
+??? >>> LINT_CHECK_DEFAULT
+    "rust-analyzer.check.overrideCommand": ["mling", "ra-lint-check"],
+??? <<<
+??? >>> LINT_CHECK_CHECK
+    "rust-analyzer.check.overrideCommand": ["mling", "ra-lint-check"],
+??? <<<
+??? >>> LINT_CHECK_CLIPPY
+    "rust-analyzer.check.overrideCommand": ["mling", "ra-lint-clippy"],
+??? <<<
+    "rust-analyzer.checkOnSave": true,
+    "rust-analyzer.files.exclude": ["**/target/**"],
+    "rust-analyzer.linkedProjects": [],
+    "rust-analyzer.cargo.features": [],
+    "rust-analyzer.procMacro.enable": true,
+    "rust-analyzer.procMacro.attributes.enable": true
+}

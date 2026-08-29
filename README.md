@@ -14,7 +14,7 @@ mling proj-init ref@variant
 
 | ref\variant | Basic Template | Tiny Template | Full Template |
 | ----------: | :------------: | :-----------: | :-----------: |
-|      Latest |  latest@basic  |       X       |       X       |
+|      Latest |  latest@basic  |  latest@tiny  |       X       |
 |       0.4.0 |       X        |       X       |       X       |
 
 ## Early Versions
