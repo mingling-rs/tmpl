@@ -1,29 +1,31 @@
 [[classes]]
-name = "subcommand"
-description = "Add a subcommand"
-template = "classes/subcommand.rs"
-output-dir = "src/command/"
+name = "command"
+description = "Add a command"
+template = "classes/command.rs"
+output-dir = "src/app/command/"
+append-file = "src/app/command.rs"
+append-content = "\npub(crate) mod <<<snake_case>>>;"
 
 [[classes]]
-name = "error"
-description = "Add a error"
-template = "classes/error.rs"
-output-dir = "src/error/"
+name = "external-type-handler"
+description = "Add a handler for external types"
+template = "classes/external_type_handler.rs"
+output-dir = "src/app/external/"
+append-file = "src/app/external.rs"
+append-content = "\npub(crate) mod <<<snake_case>>>;"
 
 [[classes]]
-name = "setup"
-description = "Add a setup"
-template = "classes/setup.rs"
-output-dir = "src/setup/"
+name = "external-type-renderer"
+description = "Add a renderer for external types"
+template = "classes/external_type_renderer.rs"
+output-dir = "src/app/external/"
+append-file = "src/app/external.rs"
+append-content = "\npub(crate) mod <<<snake_case>>>;"
 
 [[classes]]
-name = "hook"
-description = "Add a hook setup"
-template = "classes/hook.rs"
-output-dir = "src/hook/"
-
-[[classes]]
-name = "resource"
-description = "Add a global resource"
-template = "classes/resource.rs"
-output-dir = "src/resource/"
+name = "empty-setup"
+description = "Add a handler for an extension setup"
+template = "classes/empty_setup.rs"
+output-dir = "src/app/extension/"
+append-file = "src/app/extension.rs"
+append-content = "\npub(crate) mod <<<snake_case>>>;"

@@ -1,0 +1,36 @@
+{
+    "lsp": {
+        "rust-analyzer": {
+            "initialization_options": {
+                "cargo": {
+                    "features": []
+                },
+                "check": {
+                    "overrideCommand": [
+                      "mling",
+??? >>> LINT_CHECK_DEFAULT
+                      "ra-lint-check"
+??? <<<
+??? >>> LINT_CHECK_CHECK
+                      "ra-lint-check"
+??? <<<
+??? >>> LINT_CHECK_CLIPPY
+                      "ra-lint-clippy"
+??? <<<
+                    ]
+                },
+                "checkOnSave": true,
+                "files": {
+                    "exclude": [ "**/target/**" ]
+                },
+                "linkedProjects": [],
+                "procMacro": {
+                    "attributes": {
+                        "enable": true
+                    },
+                    "enable": true
+                }
+            }
+        }
+    }
+}

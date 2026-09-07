@@ -1,0 +1,13 @@
+[check]
+overrideCommand = [
+    "mling",
+??? >>> LINT_CHECK_DEFAULT
+    "ra-lint-check",
+??? <<<
+??? >>> LINT_CHECK_CHECK
+    "ra-lint-check"
+??? <<<
+??? >>> LINT_CHECK_CLIPPY
+    "ra-lint-clippy",
+??? <<<
+]

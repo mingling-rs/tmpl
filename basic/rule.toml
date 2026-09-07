@@ -1,124 +1,50 @@
-# User Input
+[[user.input]]
+name = "name"
 
 [[user.input]]
-name = "program_name"
+name = "version"
 
-[[user.toggle]]
-name = "exit_code"
+[[user.input]]
+name = "description"
+
+# Async
 
 [[user.toggle]]
 name = "tokio"
 
 [[user.toggle]]
-name = "async_std"
+name = "async-std"
 
 [[user.toggle]]
-name = "soml"
+name = "smol"
 
 [[user.toggle-mutex]]
-mutex = [ "tokio", "async_std", "soml" ]
-reason = "You can only select one async runtime"
-
-[[user.toggle]]
-name = "completion"
-
-[[user.toggle]]
-name = "pathf"
-default = true
-
-[[user.toggle]]
-name = "structural_renderer"
-
-[[user.toggle]]
-name = "dispatch_tree"
-
-[[user.toggle]]
-name = "use_parser"
-
-[[user.selection]]
-name = "parser"
-option = [ "clap", "builtin", "picker" ]
-
-[[user.toggle-mutex]]
-mutex = [ "clap", "builtin", "picker" ]
-reason = "You can only select one argument parser"
-
-[[user.input]]
-name = "debug" # DEBUG ONLY
-
-# Display Control
+mutex = [ "tokio", "smol", "async-std" ]
+reason = "You can only choose one async runtime"
 
 [[display]]
-name = "ASYNC_STD"
-rule = "async_std"
+name = "USE_ASYNC"
+rule = "tokio || async-std || smol"
 
 [[display]]
-name = "TOKIO"
+name = "USE_SYNC"
+rule = "!tokio && !async-std && !smol"
+
+[[display]]
+name = "USE_TOKIO_RT"
 rule = "tokio"
 
 [[display]]
-name = "SOML"
-rule = "soml"
+name = "USE_SMOL_RT"
+rule = "smol"
 
 [[display]]
-name = "ASYNC"
-rule = "tokio || async_std || soml"
+name = "USE_ASYNC_STD_RT"
+rule = "async-std"
 
-[[display]]
-name = "SYNC"
-rule = "!tokio && !async_std && !soml"
-
-[[display]]
-name = "BUILD_TIME"
-rule = "completion || pathf"
-
-[[hide-file]]
-file = "./build.rs"
-rule = "!completion && !pathf"
-
-[[display]]
-name = "PARSER_CLAP"
-rule = "use_parser && parser == clap"
-
-[[display]]
-name = "PARSER_BUILTIN"
-rule = "use_parser && parser == builtin"
-
-[[display]]
-name = "PARSER_PICKER"
-rule = "use_parser && parser == picker"
-
-[[display]]
-name = "NOT_PARSER_PICKER"
-rule = "!use_parser || parser != picker"
-
-[[display]]
-name = "COMPLETION"
-rule = "completion"
-
-[[display]]
-name = "STRUCTURAL_RENDERER"
-rule = "structural_renderer"
-
-[[display]]
-name = "EXIT_CODE"
-rule = "exit_code"
-
-[[display]]
-name = "NOT_EXIT_CODE"
-rule = "!exit_code"
-
-[[display]]
-name = "DISPATCH_TREE"
-rule = "dispatch_tree"
-
-[[display]]
-name = "NOT_DISPATCH_TREE"
-rule = "!dispatch_tree"
-
-[[display]]
-name = "PATHF"
-rule = "pathf"
+# Debug
+[[user.toggle]]
+name = "debug"
 
 [[display]]
 name = "DEBUG"
@@ -127,3 +53,48 @@ rule = "debug"
 [[display]]
 name = "NOT_DEBUG"
 rule = "!debug"
+
+# Linter
+
+[[user.toggle]]
+name = "ra_zed"
+
+[[user.toggle]]
+name = "ra_vscode"
+
+[[user.toggle]]
+name = "ra_toml"
+
+[[user.toggle]]
+name = "lint_clippy"
+
+[[user.toggle]]
+name = "lint_check"
+
+[[user.toggle-mutex]]
+mutex = [ "lint_clippy", "lint_check" ]
+reason = "You can only choose one checking method"
+
+[[hide-file]]
+file = "./rust-analyzer.toml"
+rule = "!ra_toml"
+
+[[hide-dir]]
+dir = "./.vscode/"
+rule = "!ra_vscode"
+
+[[hide-dir]]
+dir = "./.zed/"
+rule = "!ra_zed"
+
+[[display]]
+name = "LINT_CHECK_DEFAULT"
+rule = "!lint_clippy && !lint_check"
+
+[[display]]
+name = "LINT_CHECK_CLIPPY"
+rule = "lint_clippy"
+
+[[display]]
+name = "LINT_CHECK_CHECK"
+rule = "lint_check"

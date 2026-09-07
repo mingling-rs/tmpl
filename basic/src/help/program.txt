@@ -1,0 +1,6 @@
+<<<description>>>
+
+USAGE: <<<name>>> <GLOBAL> [SUBCOMMAND] <ARGS...>
+FLAGS:
+
+COMMANDS:

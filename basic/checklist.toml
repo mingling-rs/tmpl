@@ -1,6 +1,6 @@
 # --------------------------------------------------------------------------- #
 #
-#   Mingling 0.4 Template
+#   Mingling 0.5 Template (Basic)
 #
 # > Welcome to Mingling.
 # > Before starting your project, please fill out this `checklist` file,
@@ -8,65 +8,44 @@
 #
 # --------------------------------------------------------------------------- #
 
-### 1. Please enter your program name:
+name = "basic-cli"
+version = "0.1.0"
+description = "A simple CLI program"
 
-program_name = "my-cli"
+#############
+### ASYNC ###
+#############
 
-### 2. Please select the parser used in the project,
-# ------------------
-use_parser = true
-# ------------------
-
-# Clap Derive, the most mainstream option.
-# When enabled,
-# Mingling will use the struct implementing clap::Parser as the Entry Type
-# ------------------
-# parser = "clap"
-# ------------------
-
-# Builtin, Mingling's built-in argument parser, lightweight, order-sensitive, suitable for simple parsing
-# ------------------
-# parser = "builtin"
-# ------------------
-
-# Picker, based on `arg-picker`, a lightweight and type-safe argument parser that aligns better with Mingling's paradigm
-# ------------------
-parser = "picker"
-# ------------------
-
-### 3. If you have async requirements, please select an async runtime
-#   Hint: You can only enable one of them
+### Enable an async runtime
+#   If your program requires async support, you can choose one of the following runtimes
 # ------------------
 # tokio = true
-# async_std = true
+# async-std = true
 # smol = true
-# ------------------
 
-### 4. If you need flexible management of your program's exit codes, enable this
-# ------------------
-exit_code = true
-# ------------------
+##############
+### LINTER ###
+##############
 
-### 5. If your project has completion needs, enable this
+### Regarding `rust-analyzer` support
+#   Enable to create configuration files for `rust-analyzer`,
+#   they will configure the `mling ra-lint-check` command for code quality checks
 # ------------------
-completion = true
-# ------------------
+# ra_zed = true
+# ra_vscode = true
+# ra_toml = true
 
-### 6. If you expect the number of commands to be > 20,
-#   enable the compile-time dispatch tree for faster matching
+### Checking Method
+#   HINT: You can choose one Linter checking method
 # ------------------
-# dispatch_tree = true
-# ------------------
+# lint_check = true
+# lint_clippy = true
 
-### 7. If you want the program to be able to output structured data controlled by flags such as `--json`, enable this
-# ------------------
-# structural_renderer = true
-# ------------------
+#############
+### DEBUG ###
+#############
 
-### 8. Enable developer debugging, which will modify the project structure for convenient debugging
+### Development/Debug Mode
+#   Point the mingling dependency to a relative path "../mingling/mingling" for local debugging
 # ------------------
 # debug = true
-# ------------------
-
-### Final. All set.
-#   Please run `mling proj-init` in this directory to continue creating the project.
