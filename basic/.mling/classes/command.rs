@@ -1,4 +1,9 @@
-use mingling::{ShellContext, Suggest, macros::help, prelude::*};
+use mingling::{
+    ShellContext, Suggest,
+    macros::{help, metadata},
+    metadata::Description,
+    prelude::*,
+};
 
 #[command(entry = Entry<<<pascal_case>>>)]
 pub fn <<<snake_case>>>(args: Entry<<<pascal_case>>>) {
@@ -18,4 +23,9 @@ Usage: <<<name>>> <<<subcommand_case>>> <ARG...>
 "
     .trim()
     .to_string()
+}
+
+#[metadata(Entry<<<pascal_case>>>)]
+pub fn desc_<<<snake_case>>>() -> Description {
+    "Subcommand \"<<<subcommand_case>>>\"".into()
 }
