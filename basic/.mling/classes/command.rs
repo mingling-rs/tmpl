@@ -27,5 +27,6 @@ Usage: <<<name>>> <<<subcommand_case>>> <ARG...>
 
 #[metadata(Entry<<<pascal_case>>>)]
 pub fn desc_<<<snake_case>>>() -> Description {
+    // TODO:: Fill in the description of this subcommand
     "Subcommand \"<<<subcommand_case>>>\"".into()
 }
